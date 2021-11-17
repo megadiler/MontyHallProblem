@@ -1,6 +1,11 @@
 // https://en.wikipedia.org/wiki/Monty_Hall_problem
-// Генератор экспериментов парадокса Монти-Холла. 
-// Вычисляет по заданной случайной выборке, число выигрышей в случае смены выбора, и в случает отказа от смены выбора 
+// 
+// This simple C++ code generates random sample of N experiments and calculate results for 2 strategies 
+// (1)Change First selection or  (2)do not change init selection 
+// 
+// This code shows that
+// strategy(1) provides probability of Win = 2/3 
+// strategy(2) provides probability of Win = 1/3 
 //
 //
 //               | F_irst C_hoice success    |  F_irst C_hoise is fail    |    
@@ -25,7 +30,7 @@ struct Count123
 
 int main()
 {
-    const int N = 10000000;//число экспериментов 
+    const int N = 10000000;//С‡РёСЃР»Рѕ СЌРєСЃРїРµСЂРёРјРµРЅС‚РѕРІ 
 
     std::vector<int> V = std::vector<int>(N);
 
@@ -84,12 +89,12 @@ int main()
             }
         }
 
-        //не менять выбор
+        //РЅРµ РјРµРЅСЏС‚СЊ РІС‹Р±РѕСЂ
         int SecondChoise = FirstChoise;
         if (SecondChoise == iter)
             CountSuccess_NoChange++;
 
-        //менять выбор
+        //РјРµРЅСЏС‚СЊ РІС‹Р±РѕСЂ
         switch (FirstChoise)
         {
         case 1: SecondChoise = NumToOpen == 2 ? 3 : 2; break;
