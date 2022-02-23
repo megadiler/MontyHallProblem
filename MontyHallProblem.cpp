@@ -8,12 +8,12 @@
 // strategy(2) provides probability of Win = 1/3 
 //
 //
-//               | F_irst C_hoice success    |  F_irst C_hoise is fail    |    
+//               | First Choice success      |  First Choise is fail      |    
 //---------------|---------------------------|----------------------------|
-//   no change   | prob of f_c_success = 1/3 |  prob of F_C_fail = 2/3    |
-//               | Result of game = WIN      |  REsult of game = FAIL     | 
+//   no change   | prob of FC_success = 1/3  |  prob of FC_fail = 2/3     |
+//               | Result of game = WIN      |  Result of game = FAIL     | 
 // --------------|---------------------------|----------------------------|
-//   change      | prob of F_C_success = 1/3 |  prob of F_C_fail = 2/3    |           
+//   change      | prob of FC_success = 1/3  |  prob of FCfail = 2/3      |           
 //               | Result of game = FAIL     |  Result of game =  WIN     |
 //
 
