@@ -30,7 +30,7 @@ struct Count123
 
 int main()
 {
-    const int N = 10000000;//число экспериментов 
+    const int N = 10000000;//number of experiments
 
     std::vector<int> V = std::vector<int>(N);
 
@@ -89,12 +89,12 @@ int main()
             }
         }
 
-        //не менять выбор
+        //don't switch
         int SecondChoise = FirstChoise;
         if (SecondChoise == iter)
             CountSuccess_NoChange++;
 
-        //менять выбор
+        //switch choice
         switch (FirstChoise)
         {
         case 1: SecondChoise = NumToOpen == 2 ? 3 : 2; break;
@@ -106,6 +106,6 @@ int main()
     }
 
     std::cout << "Probability to win: " << "\n";
-    std::cout << "No Change:  " << static_cast<double>(CountSuccess_NoChange) * 100.0 / N  <<"\n";
-    std::cout << "Yes Change:  " << static_cast<double>(CountSuccess_YesChange) * 100.0 / N << "\n";
+    std::cout << "Don't switch choice:  " << static_cast<double>(CountSuccess_NoChange) * 100.0 / N  <<"\n";
+    std::cout << "switch your choice:  " << static_cast<double>(CountSuccess_YesChange) * 100.0 / N << "\n";
 }
