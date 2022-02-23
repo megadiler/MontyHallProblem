@@ -1,2 +1,26 @@
-# MontyHallProblem
-https://en.wikipedia.org/wiki/Monty_Hall_problem U're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say 1, and the host, who knows what's behind the doors, opens another door, say 3, which has a goat. He then says to you, "Do U want to pick door 2?" Is it to your advantage to switch your choice?
+# Эксперименты с парадоксом Монти Холла
+
+Реализован генератор испытаний воспроизводящий заданное число раз эксперименты с угадыванием. 
+В каждом эксперименте случайным образом выбирается дверь 1/2/3 за которую спрятать автомобиль. Далее программа реализует 2 стратегии игрока: менять дверь и не менять. 
+Затем подсчитывается доля выигрышей для обеих стратегий. 
+
+#### Результаты эксперимента совпадают с теорией. 
+* Вероятность выигрыша = 1/3 если не менять выбор
+* Вероятность выигрыша = 2/3 если менять выбор
+
+
+|               | First Choice success      |  First Choise is fail      |    
+|---------------|---------------------------|----------------------------|
+|   no change   | prob of FC_success = 1/3  |  prob of FC_fail = 2/3     |
+|               | Result of game = WIN      |  Result of game = FAIL     | 
+|   change      | prob of FC_success = 1/3  |  prob of FCfail = 2/3      |           
+|               | Result of game = FAIL     |  Result of game =  WIN     |
+
+
+# Парадокс Монти Холла
+
+[Wiki](https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%B0%D0%B4%D0%BE%D0%BA%D1%81_%D0%9C%D0%BE%D0%BD%D1%82%D0%B8_%D0%A5%D0%BE%D0%BB%D0%BB%D0%B0)
+
+<div class="alert alert-info">Представьте, что вы стали участником игры, в которой вам нужно выбрать одну из трёх дверей. За одной из дверей находится автомобиль, за двумя другими дверями — козы. Вы выбираете одну из дверей, например, номер 1, после этого ведущий, который знает, где находится автомобиль, а где — козы, открывает одну из оставшихся дверей, например, номер 3, за которой находится коза. После этого он спрашивает вас — не желаете ли вы изменить свой выбор и выбрать дверь номер 2? Увеличатся ли ваши шансы выиграть автомобиль, если вы примете предложение ведущего и измените свой выбор?</div>
+
+
